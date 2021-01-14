@@ -132,21 +132,19 @@ void loop(){
     float newT = dht.readTemperature();
     
     if (isnan(newT)) {
-      Serial.println("Failed to read from DHT sensor!");
+      Serial.println("DHT sensor hatasi!");
     }
     else {
       t = newT;
-      Serial.println(t);
     }
 
     float newH = dht.readHumidity();
 
     if (isnan(newH)) {
-      Serial.println("Failed to read from DHT sensor!");
+      Serial.println("DHT sensor hatasi!");
     }
     else {
       h = newH;
-      Serial.println(h);
     }
   }
 }
